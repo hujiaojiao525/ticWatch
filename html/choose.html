@@ -52,30 +52,22 @@
 			<div class='pos-btn'><span class="btn btn-dis next-btn">下一步</span></div>
 		</div>
 		<!-- 电话号码页，定位在页面右侧，right-hide:隐藏 -->
-		<section class="tel-number right-page right-hide">
+		<section class="tel-number right-page">
 			<span class='number num-high'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
-			<span class='number'>150 3023 4663</span>
 		</section>
 	</div>
 </body>
 </html>
+<script id='test' type='text/html'>
+	{{each result as value i}}
+		{{if i==0}}
+		<span class='number num-high'>{{value.svcNumber.slice(0,3)+" "+value.svcNumber.slice(3,7)+" "+value.svcNumber.slice(7)}}</span>
+		{{ else}}
+		<span class='number'>{{value.svcNumber.slice(0,3)+" "+value.svcNumber.slice(3,7)+" "+value.svcNumber.slice(7)}}</span>
+		{{/if}}
+	{{/each}}
+</script>
+<script src='../lib/require.js'></script>
+<script src='../js/choose.js'></script>
+
+
